@@ -61,4 +61,5 @@ By the end of the course, the students will design, program, and analyze algorit
 
 ## Assignments
 
+[Rules](RULES.md)
 
