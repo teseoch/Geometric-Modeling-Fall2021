@@ -4,6 +4,7 @@
 *Teseo Schneider*
 
 [http://web.uvic.ca/~teseo/](http://web.uvic.ca/~teseo/)
+
 [teseo@uvic.ca](mailto:teseo@uvic.ca)
 
 <!-- Office Hours: Thursdays, 3pm-4pm on Zoom -->
@@ -37,11 +38,11 @@ By the end of the course, the students will design, program, and analyze algorit
 
 
 ### Textbook
->>> *Polygon Mesh Processing*
-Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez
-A K Peters/CRC Press
-Textbook - 250 Pages
-ISBN 1568814267
+> *Polygon Mesh Processing*<br>
+>Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez<br>
+>A K Peters/CRC Press<br>
+>Textbook - 250 Pages<br>
+>ISBN 1568814267<br>
 
 ### Grading
 
