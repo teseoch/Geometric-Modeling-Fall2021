@@ -13,6 +13,10 @@
 TWF at 10:30am - 11:20am
 MacLaurin Building D116 
 
+### Exam:
+
+Last week of the term, TBA.
+
 ## Course Overview
 
 Recent advances in 3D digital geometry processing have created many novel concepts for the mathematical representation and interactive manipulation of geometric models. This course covers some of the latest developments in geometric modeling and digital geometry processing. Topics include surface modeling based on polygonal meshes, surface reconstruction, mesh improvement, mesh parametrization, discrete differential geometry, interactive shape editing, skinning animation, architectural and structure-aware geometric modeling, shape modeling with an eye on 3D printing. The students will learn how to design, program, and analyze algorithms and systems for interactive 3D shape modeling and digital geometry processing.
@@ -49,12 +53,12 @@ By the end of the course, the students will design, program, and analyze algorit
 #### 486B
 - Assignments: 60%
 - Project: 25%
-- Final exam: 15%
+- Exam: 15%
 
 #### 586B
 - Assignments: 50%
 - Project: 35%
-- Final exam: 15%
+- Exam: 15%
 
 ## Slides
 
