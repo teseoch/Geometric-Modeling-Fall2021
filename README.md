@@ -68,3 +68,4 @@ By the end of the course, the students will design, program, and analyze algorit
 
 [Rules](RULES.md)
 
+[Assignment 1](Assignment1/README.md)
