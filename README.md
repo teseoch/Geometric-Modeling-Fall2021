@@ -7,11 +7,11 @@
 
 [teseo@uvic.ca](mailto:teseo@uvic.ca)
 
-<!-- Office Hours: Thursdays, 3pm-4pm on Zoom -->
+Office Hours: Wednesdays, 4pm-5pm ECS 612 or by appointment
 
 ### Lectures:
 TWF at 10:30am - 11:20am
-MacLaurin Building D116 
+MacLaurin Building D116
 
 ### Exam:
 
@@ -62,6 +62,7 @@ By the end of the course, the students will design, program, and analyze algorit
 
 ## Slides
 
+[01 Introduction](slides/01%20-%20Introduction.pdf)
 
 ## Assignments
 
