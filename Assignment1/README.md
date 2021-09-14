@@ -19,11 +19,6 @@ contains the coordinates of the i-th vertex.
 F is an integer array (dimension #faces x 3 where #F is the number of faces) which contains the
 descriptions of the triangles in the mesh. The i-th row of F contains the indices of the vertices in V that form the i-th face, ordered counter-clockwise.
 
-<!-- Check out the
-\href{http://eigen.tuxfamily.org/dox/GettingStarted.html}{"Getting Started"}
-page of \texttt{Eigen} as well as the
-\href{http://eigen.tuxfamily.org/dox/group__QuickRefPage.html}{Quick Reference}
-page to acquaint yourselves with the basic matrix operations supported. -->
 
 Note that you need to install `numpy` manually with `conda install numpy`.
 
@@ -41,20 +36,20 @@ conda install -c conda-forge jupyterlab
 and download them from the [tutorial repository](https://github.com/libigl/libigl-python-bindings/tree/master/tutorial).
 
 
-## Neighborhood Computations
+## Neighborhood Computations [3pt]
 For this task, you will use `igl` to perform basic neighborhood computations on a mesh.
 Computing the neighbors of a mesh face or vertex is required for most mesh processing operations, as you will see later in the class.
 In order to use any function from `igl` (e.g. the function to compute per-face normals),
 you must just import the package `import igl`.
 
-### Vertex-to-Face Relations
+### Vertex-to-Face Relations [1pt]
 Given V and F, generate an adjacency list which contains, for each vertex, a
 list of faces adjacent to it. The ordering of the faces incident on a vertex
 does not matter. Your program should print out the vertex-to-face relations.
 
 *Relevant `igl` functions:* `igl.vertex_triangle_adjacency`.
 
-### Vertex-to-Vertex Relations
+### Vertex-to-Vertex Relations [1pt]
 Given V and F, generate an adjacency list which contains, for each vertex, a
 list of vertices connected with it. Two vertices are connected if there exists
 an edge between them, i.e., if the two vertices appear in the same row of F. The
@@ -64,14 +59,14 @@ print out the vertex-to-vertex relations.
 *Relevant `igl` functions:* `igl.adjacency_list`.
 
 
-### Visualizing the Neighborhood Relations
+### Visualizing the Neighborhood Relations [1pt]
 Check your results by comparing them to raw data inside F.
 
 Required output of this section:
 
  * A text dump of the content of the two data structures for the provided mesh `bunny_small.off`.
 
-## Shading
+## Shading [6pt]
 For this task, you will experiment with the different ways of shading discrete surfaces already implemented in `igl`.
 Display the mesh with the appropriate shading.
 
@@ -80,7 +75,7 @@ Use `meshplot.plot(v,f, n=n)` to set the shading in the viewer to use the normal
 
 *Note:* `meshplot` supports only per vertex normals, thus, to visualize the different shading you will need to "explode" the mesh. That is, separate all faces and duplicate vertices. For instance, if the mesh has faces `f=[[0, 1, 2], [1, 3, 2]]` (with vertices `1` and `2` shared among the two faces), `exploded_f=[[0, 1, 2], [3, 4, 5]]` with the vertices `3` and `5` being a copy of vertices `1` and `2`. Note that igl will give you per-vertex, per-face, and per-vertex-per-face quantities, so you will need to compute and store an index mapping from the input mesh to the exploded one.
 
-### Flat Shading
+### Flat Shading [2pt]
 ![](img/face.png?raw=true)
 
 
@@ -94,7 +89,7 @@ the input mesh with flat shading.
 *Relevant `igl` functions:* `igl.per_face_normals`.
 
 
-### Per-vertex Shading
+### Per-vertex Shading [2pt]
 ![](img/vertex.png?raw=true)
 
 Flat shading may produce visual artifacts, due to the color discontinuity
@@ -107,7 +102,7 @@ per-vertex shading.
 *Relevant `igl` functions:* `igl.per_vertex_normals`.
 
 
-### Per-corner Shading
+### Per-corner Shading [2pt]
 ![](img/corner.png?raw=true)
 
 On models with sharp feature lines, averaging the per-face normals on the feature, as done for per-vertex shading, may result in blurred rendering. It is possible to avoid this limitation and to render crisp sharp features by using per-corner normals. In this case, a different normal is assigned to each face corner; this implies that every vertex will get a (possibly different) normal for every adjacent face. A threshold parameter is used to decide when an edge belongs to a sharp feature. The threshold is applied to the angle between the two corner normals: if it is less than the threshold value, the normals must be averaged, otherwise they are kept untouched.  Your program should compute the appropriate shading normals (with a threshold of your choice) and shade the input mesh with per-vertex shading.
@@ -122,7 +117,7 @@ Required output of this section:
  * Screenshots of the provided meshes shaded with flat, per-vertex, and per-corner normals.
 
 
-## Connected Components
+## Connected Components [3pt]
 ![](img/components.png?raw=true)
 
 Using neighborhood connectivity, it is possible to partition a mesh into
@@ -143,7 +138,7 @@ Required output of this section:
 
 
 
-## A simple subdivision scheme
+## A simple subdivision scheme [8pt]
 
 ![](img/sqrt.png?raw=true)
 

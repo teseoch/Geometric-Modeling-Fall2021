@@ -63,9 +63,11 @@ By the end of the course, the students will design, program, and analyze algorit
 ## Slides
 
 [01 Introduction](slides/01%20-%20Introduction.pdf)
+[01 Introduction](slides/02%20-%20Shape%20Representation.pdf)
 
 ## Assignments
 
 [Rules](RULES.md)
 
 [Assignment 1](Assignment1/README.md)
+[Assignment 1 Slides](slides/A1%20-%20Assignment%201.pdf)
