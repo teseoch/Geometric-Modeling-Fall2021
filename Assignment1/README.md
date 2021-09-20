@@ -64,7 +64,7 @@ Check your results by comparing them to raw data inside F.
 
 Required output of this section:
 
- * A text dump of the content of the two data structures for the provided mesh `bunny_small.off`.
+ * A text dump (or print) of the content of the two data structures for the provided mesh `bunny.off`.
 
 ## Shading [6pt]
 For this task, you will experiment with the different ways of shading discrete surfaces already implemented in `igl`.
@@ -174,7 +174,7 @@ by applying the following rules:
 
 ![](img/subdivision.png?raw=true)
 
-Fill in the appropriate source code sections so that hitting the mesh is subdivided and displayed.
+Fill in the appropriate source code sections to display and subdivide the mesh.
 
 *Relevant `igl` functions:* Many options possible.
 Some suggestions: `adjacency_list`, `triangle_triangle_adjacency`, `edge_topology`, `barycenter`.
