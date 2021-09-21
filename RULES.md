@@ -13,6 +13,10 @@ In particular you will be using the [python bindings of igl](https://libigl.gith
 The `libigl` library includes a set of tutorials, an introduction to which can be found in the two previous links. You are advised to look over the relevant tutorials before starting the implementation for the assignments; you are also encouraged to examine the source code of all the library functions that you use in your code to see how they were
 implemented.
 
+`meshplot` is a simple, and fast 2d and 3d mesh viewer based on `pythreejs`. You can find the documentation [here](https://skoch9.github.io/meshplot/).
+
+
+
 No libraries apart from `libigl`, `numpy`, `meshplot`, and `scipy` are permitted unless permission is granted in advance.
 
 ## Installing igl in Python
