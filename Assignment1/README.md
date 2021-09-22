@@ -43,14 +43,14 @@ In order to use any function from `igl` (e.g. the function to compute per-face n
 you must just import the package `import igl`.
 
 ### Vertex-to-Face Relations [1pt]
-Given V and F, generate an adjacency list which contains, for each vertex, a
+Given V and F, generate an adjacency list that contains, for each vertex, a
 list of faces adjacent to it. The ordering of the faces incident on a vertex
 does not matter. Your program should print out the vertex-to-face relations.
 
 *Relevant `igl` functions:* `igl.vertex_triangle_adjacency`.
 
 ### Vertex-to-Vertex Relations [1pt]
-Given V and F, generate an adjacency list which contains, for each vertex, a
+Given V and F, generate an adjacency list that contains, for each vertex, a
 list of vertices connected with it. Two vertices are connected if there exists
 an edge between them, i.e., if the two vertices appear in the same row of F. The
 ordering of the vertices in each list does not matter.  Your program should
@@ -64,16 +64,23 @@ Check your results by comparing them to raw data inside F.
 
 Required output of this section:
 
- * A text dump (or print) of the content of the two data structures for the provided mesh `bunny.off`.
+ * A print of the content of the two data structures for the provided mesh `bunny.off`.
 
 ## Shading [6pt]
 For this task, you will experiment with the different ways of shading discrete surfaces already implemented in `igl`.
 Display the mesh with the appropriate shading.
 
-Use `meshplot.plot(v,f, n=n)` to set the shading in the viewer to use the normals `n` you computed.
+Use `meshplot.plot(v,f, n=n, shading={"flat": False})` to set the shading in the viewer to use the normals `n` you computed.
+
+You can visualise normals `n` by using meshplot as following
+```python
+p = meshplot.plot(v, f, n=n, shading={"flat": False})
+p.add_lines(v, v + 0.01*n)
+```
+The scaling `0.01` is used to scale the lines to a reasonable size; that is, for the cube `0.5` is ok, while for the sphere `0.01` is better.
 
 
-*Note:* `meshplot` supports only per vertex normals, thus, to visualize the different shading you will need to "explode" the mesh. That is, separate all faces and duplicate vertices. For instance, if the mesh has faces `f=[[0, 1, 2], [1, 3, 2]]` (with vertices `1` and `2` shared among the two faces), `exploded_f=[[0, 1, 2], [3, 4, 5]]` with the vertices `3` and `5` being a copy of vertices `1` and `2`. Note that igl will give you per-vertex, per-face, and per-vertex-per-face quantities, so you will need to compute and store an index mapping from the input mesh to the exploded one.
+*Note:* `meshplot` supports only per-vertex normals; thus, to visualize the different shading you will need to "explode" the mesh. That is, separate all faces and duplicate vertices. For instance, if the mesh has faces `f=[[0, 1, 2], [1, 3, 2]]` (with vertices `1` and `2` shared among the two faces), `exploded_f=[[0, 1, 2], [3, 4, 5]]` with the vertices `3` and `5` being a copy of vertices `1` and `2`. Note that `igl` will give you per-vertex, per-face, and per-vertex-per-face quantities, so you will need to compute and store an index mapping from the input mesh to the exploded one.
 
 ### Flat Shading [2pt]
 ![](img/face.png?raw=true)
@@ -105,16 +112,16 @@ per-vertex shading.
 ### Per-corner Shading [2pt]
 ![](img/corner.png?raw=true)
 
-On models with sharp feature lines, averaging the per-face normals on the feature, as done for per-vertex shading, may result in blurred rendering. It is possible to avoid this limitation and to render crisp sharp features by using per-corner normals. In this case, a different normal is assigned to each face corner; this implies that every vertex will get a (possibly different) normal for every adjacent face. A threshold parameter is used to decide when an edge belongs to a sharp feature. The threshold is applied to the angle between the two corner normals: if it is less than the threshold value, the normals must be averaged, otherwise they are kept untouched.  Your program should compute the appropriate shading normals (with a threshold of your choice) and shade the input mesh with per-vertex shading.
+On models with sharp feature lines, averaging the per-face normals on the feature, as done for per-vertex shading, may result in blurred rendering. It is possible to avoid this limitation and to render crisp sharp features by using per-corner normals. In this case, a different normal is assigned to each face corner; this implies that every vertex will get a (possibly different) normal for every adjacent face. A threshold parameter is used to decide when an edge belongs to a sharp feature. The threshold is applied to the angle between the two corner normals: if it is less than the threshold value, the normals must be averaged, otherwise they are kept untouched. Your program should compute the appropriate shading normals (with a threshold of your choice) and shade the input mesh with per-vertex shading.
 
 *Relevant `igl` functions:* `igl.per_corner_normals`.
 
-Compare the result must be compared with the one obtained with flat and per-vertex shading. Experiment with the threshold value.
+Compare the result with the one obtained with flat and per-vertex shading. Experiment with the threshold value.
 
 
 Required output of this section:
 
- * Screenshots of the provided meshes shaded with flat, per-vertex, and per-corner normals.
+ * Plot of the provided meshes shaded with flat, per-vertex, and per-corner normals.
 
 
 ## Connected Components [3pt]
@@ -133,8 +140,8 @@ Call `meshplot.plot(v, f, c=c)`, where `c` is the computed labels to display col
 
 Required output of this section:
 
- * Screenshots of the provided meshes with each connected component colored differently.
- * The number of connected components and the size of each component (measured in number of faces) for all the provided models.
+ * Plot of the provided meshes with each connected component colored differently.
+ * Print of the number of connected components and the size of each component (measured in number of faces) for all the provided models.
 
 
 
@@ -182,5 +189,5 @@ Some suggestions: `adjacency_list`, `triangle_triangle_adjacency`, `edge_topolog
 
 Required output of this section:
 
-* Screenshots of the subdivided meshes.
+* Plot of the subdivided meshes.
 
