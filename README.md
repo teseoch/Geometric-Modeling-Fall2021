@@ -65,6 +65,8 @@ By the end of the course, the students will design, program, and analyze algorit
 [01 Introduction](slides/01%20-%20Introduction.pdf)</br>
 [02 Shape Representation](slides/02%20-%20Shape%20Representation.pdf)</br>
 [03 Acquisition](slides/03%20-%20Acquisition.pdf)</br>
+[04 Meshes](slides/04%20-%20Meshes.pdf)</br>
+[05 Reconstruction](slides/05%20-%20Reconstruction.pdf)</br>
 
 ## Assignments
 
