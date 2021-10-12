@@ -67,7 +67,8 @@ By the end of the course, the students will design, program, and analyze algorit
 [03 Acquisition](slides/03%20-%20Acquisition.pdf)</br>
 [04 Meshes](slides/04%20-%20Meshes.pdf)</br>
 [05 Reconstruction](slides/05%20-%20Reconstruction.pdf)</br>
-
+[06 Normal Estimation](slides/06%20-%20Normal%20Estimation.pdf)</br>
+[07 Curves](slides/07%20-%20Curves.pdf)</br>
 ## Assignments
 
 [Rules](RULES.md)
