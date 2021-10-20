@@ -69,6 +69,8 @@ By the end of the course, the students will design, program, and analyze algorit
 [05 Reconstruction](slides/05%20-%20Reconstruction.pdf)</br>
 [06 Normal Estimation](slides/06%20-%20Normal%20Estimation.pdf)</br>
 [07 Curves](slides/07%20-%20Curves.pdf)</br>
+[08 Surfaces](slides/08%20-%20Surfaces.pdf)</br>
+
 ## Assignments
 
 [Rules](RULES.md)
@@ -78,3 +80,6 @@ By the end of the course, the students will design, program, and analyze algorit
 
 [Assignment 2](Assignment2/README.md)</br>
 [Assignment 2 Slides](slides/A2%20-%20Assignment%202.pdf)
+
+[Assignment 3](Assignment3/README.md)</br>
+[Assignment 3 Slides](slides/A3%20-%20Assignment%203.pdf)
