@@ -70,6 +70,7 @@ By the end of the course, the students will design, program, and analyze algorit
 [06 Normal Estimation](slides/06%20-%20Normal%20Estimation.pdf)</br>
 [07 Curves](slides/07%20-%20Curves.pdf)</br>
 [08 Surfaces](slides/08%20-%20Surfaces.pdf)</br>
+[09 Smoothing](slides/09%20-%20Smoothing.pdf)</br>
 [(Extra) Laplace-Beltrami Derivation](slides/55%20-%20Cotangent%20Laplacian.pdf)</br>
 
 ## Assignments
