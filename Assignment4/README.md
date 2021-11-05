@@ -111,9 +111,7 @@ Then the scalar function's (vector-valued) gradient is
 ![](https://latex.codecogs.com/svg.latex?g_t=\nabla&space;S_t=\sum\limits_{\textrm{vertex}~i~\in~t}^3s_i\nabla\phi_i^t.)<br/>
 <!-- $\vec g_t = \nabla S_t = \sum\limits_{\textrm{vertex}~i~\in~t}^3 s_i \nabla\phi_i^t$. -->
 
-Since the "hat" functions are piecewise linear, their  gradients
-<!-- $\nabla\phi_i^t$-->
-are constant within each triangle, and so is `gt` (the full scalar function's gradient). Specifically, `gt` is a linear combination of the constant hat function gradients with the (unknown) values `si` as coefficients, meaning that we can write an expression of the form `g  = G s`, where `s` is a #V x 1 column vector holding each `si`, `g` is a column vector of size 3#F x 1 consisting of the vectors `gt` "flattened" and vertically stacked (i.e., using `gt.T.reshape(gt.size, 1)`), and `G` is the so-called "gradient matrix" of size 3#F x #V.
+Since the "hat" functions are piecewise linear, their  gradients <!-- $\nabla\phi_i^t$--> are constant within each triangle, and so is `gt` (the full scalar function's gradient). Specifically, `gt` is a linear combination of the constant hat function gradients with the (unknown) values `si` as coefficients, meaning that we can write an expression of the form `g  = G s`, where `s` is a #V x 1 column vector holding each `si`, `g` is a column vector of size 3#F x 1 consisting of the vectors `gt` "flattened" and vertically stacked (i.e., using `gt.T.reshape(gt.size, 1)`), and `G` is the so-called "gradient matrix" of size 3#F x #V.
 
 Since there is no guarantee that our interpolated face-based field is actually the gradient of some function, we cannot attempt to integrate it directly.
 Instead, we will try to find `S(x)` by asking its gradient to approximate the vector field `u` in the least-squares sense:
