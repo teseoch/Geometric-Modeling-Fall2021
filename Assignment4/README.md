@@ -41,10 +41,10 @@ The difference ("non-smoothness") of the two vectors across the edge  `(f,g)` ca
 <br/>
 ![](https://latex.codecogs.com/svg.latex?E_{fg}(u_f,u_g)=\|u_f\overline{e_f}-u_g\overline{&space;e_g}\|^2)<br/>
  <!-- $E_{fg}(u_f, u_g) = \| u_f \overline{e_f} - u_g \overline{ e_g}\|^2$ -->
-(recall that `||z||^2 = z z.conjugate()` is a complex number `z`'s squared magnitude).
-This is a quadratic form on the complex variables `uf`, `ug` and can be manipulated into the form
+By recalling that `||z||^2 = z z.conjugate()` is a complex number `z`'s squared magnitude, 
+this is a quadratic form on the complex variables `uf`, `ug` and can be manipulated into the form
 <br/>
-![](https://latex.codecogs.com/svg.latex?E_{fg}(u_f,u_g)=\begin{bmatrix}\overline{u_f}&\overline{u_g}\end{bmatrix}Q_{fg}\begin{bmatrix}u_f&#92;&#92;u_g\end{bmatrix})<br/>
+![](https://latex.codecogs.com/svg.latex?E_{fg}(u_f,u_g)=\begin{bmatrix}\overline{u_f}&\overline{u_g}\end{bmatrix}Q_{fg}\begin{bmatrix}u_f\\u_g\end{bmatrix})<br/>
  <!-- $E_{fg}(u_f, u_g) =
 \mtrx{\overline{u_f}&\overline{u_g}}  Q_{fg} \mtrx {u_f\\u_g}$  -->
 for a particular
