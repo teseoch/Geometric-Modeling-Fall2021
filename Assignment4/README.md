@@ -116,7 +116,7 @@ Since the "hat" functions are piecewise linear, their  gradients <!-- $\nabla\ph
 Since there is no guarantee that our interpolated face-based field is actually the gradient of some function, we cannot attempt to integrate it directly.
 Instead, we will try to find `S(x)` by asking its gradient to approximate the vector field `u` in the least-squares sense:
 <br/>
-![](https://latex.codecogs.com/svg.latex?\min\quad\sum\limits_{\textrm{face}~t}A_t\|g_t-u_t\|^2,)<br/>
+![](https://latex.codecogs.com/svg.latex?\min\quad\sum\limits_{\textrm{face}~t}A_t||g_t-u_t||^2,)<br/>
 <!-- \bdm{
 \min ~~\sum\limits_{\textrm{face}~t} A_t \|\vec g_t-\vec u_t\|^2,\\
 } -->
