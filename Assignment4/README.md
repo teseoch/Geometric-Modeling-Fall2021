@@ -124,7 +124,7 @@ where `A_t` is triangle `t`'s area, `g_t` is the (unknown) function's gradient o
 the guiding vector field.
 Using the linear relationship `g = Gs`, we can write this least-squares error as a (real) quadratic form:
 <br/>
-![](https://latex.codecogs.com/svg.latex?s^TKs+s^Tb+c)<br/>
+![](https://latex.codecogs.com/svg.latex?1/2s^TKs+s^Tb+c)<br/>
 <!-- $$s^TKs + s^Tb + c$$ -->
 and minimize it by solving a linear system for the unknown `s`.
 
