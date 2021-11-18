@@ -41,10 +41,10 @@ The difference ("non-smoothness") of the two vectors across the edge  `(f,g)` ca
 <br/>
 ![](https://latex.codecogs.com/svg.latex?E_{fg}(u_f,u_g)=\|u_f\overline{e_f}-u_g\overline{&space;e_g}\|^2)<br/>
  <!-- $E_{fg}(u_f, u_g) = \| u_f \overline{e_f} - u_g \overline{ e_g}\|^2$ -->
-(recall that `||z||^2 = z z.conjugate()` is a complex number `z`'s squared magnitude).
-This is a quadratic form on the complex variables `uf`, `ug` and can be manipulated into the form
+By recalling that `||z||^2 = z z.conjugate()` is a complex number `z`'s squared magnitude, 
+this is a quadratic form on the complex variables `uf`, `ug` and can be manipulated into the form
 <br/>
-![](https://latex.codecogs.com/svg.latex?E_{fg}(u_f,u_g)=\begin{bmatrix}\overline{u_f}&\overline{u_g}\end{bmatrix}Q_{fg}\begin{bmatrix}u_f&#92;&#92;u_g\end{bmatrix})<br/>
+![](https://latex.codecogs.com/svg.latex?E_{fg}(u_f,u_g)=\begin{bmatrix}\overline{u_f}&\overline{u_g}\end{bmatrix}Q_{fg}\begin{bmatrix}u_f&u_g\end{bmatrix}^T)<br/>
  <!-- $E_{fg}(u_f, u_g) =
 \mtrx{\overline{u_f}&\overline{u_g}}  Q_{fg} \mtrx {u_f\\u_g}$  -->
 for a particular
@@ -111,14 +111,12 @@ Then the scalar function's (vector-valued) gradient is
 ![](https://latex.codecogs.com/svg.latex?g_t=\nabla&space;S_t=\sum\limits_{\textrm{vertex}~i~\in~t}^3s_i\nabla\phi_i^t.)<br/>
 <!-- $\vec g_t = \nabla S_t = \sum\limits_{\textrm{vertex}~i~\in~t}^3 s_i \nabla\phi_i^t$. -->
 
-Since the "hat" functions are piecewise linear, their  gradients
-<!-- $\nabla\phi_i^t$-->
-are constant within each triangle, and so is `gt` (the full scalar function's gradient). Specifically, `gt` is a linear combination of the constant hat function gradients with the (unknown) values `si` as coefficients, meaning that we can write an expression of the form `g  = G s`, where `s` is a #V x 1 column vector holding each `si`, `g` is a column vector of size 3#F x 1 consisting of the vectors `gt` "flattened" and vertically stacked (i.e., using `gt.T.reshape(gt.size, 1)`), and `G` is the so-called "gradient matrix" of size 3#F x #V.
+Since the "hat" functions are piecewise linear, their  gradients <!-- $\nabla\phi_i^t$--> are constant within each triangle, and so is `gt` (the full scalar function's gradient). Specifically, `gt` is a linear combination of the constant hat function gradients with the (unknown) values `si` as coefficients, meaning that we can write an expression of the form `g  = G s`, where `s` is a #V x 1 column vector holding each `si`, `g` is a column vector of size 3#F x 1 consisting of the vectors `gt` "flattened" and vertically stacked (i.e., using `gt.T.reshape(gt.size, 1)`), and `G` is the so-called "gradient matrix" of size 3#F x #V.
 
 Since there is no guarantee that our interpolated face-based field is actually the gradient of some function, we cannot attempt to integrate it directly.
 Instead, we will try to find `S(x)` by asking its gradient to approximate the vector field `u` in the least-squares sense:
 <br/>
-![](https://latex.codecogs.com/svg.latex?\min\quad\sum\limits_{\textrm{face}~t}A_t\|g_t-u_t\|^2,)<br/>
+![](https://latex.codecogs.com/svg.latex?\min\quad\sum\limits_{\textrm{face}~t}A_t||g_t-u_t||^2,)<br/>
 <!-- \bdm{
 \min ~~\sum\limits_{\textrm{face}~t} A_t \|\vec g_t-\vec u_t\|^2,\\
 } -->
@@ -126,7 +124,7 @@ where `A_t` is triangle `t`'s area, `g_t` is the (unknown) function's gradient o
 the guiding vector field.
 Using the linear relationship `g = Gs`, we can write this least-squares error as a (real) quadratic form:
 <br/>
-![](https://latex.codecogs.com/svg.latex?s^TKs+s^Tb+c)<br/>
+![](https://latex.codecogs.com/svg.latex?1/2s^TKs+s^Tb+c)<br/>
 <!-- $$s^TKs + s^Tb + c$$ -->
 and minimize it by solving a linear system for the unknown `s`.
 
